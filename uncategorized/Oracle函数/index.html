@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html>
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
@@ -68,7 +68,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-Oracle函数" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><!--<article id="post-Oracle函数" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/uncategorized/Oracle函数/" class="article-date">
   <time datetime="2019-07-07T10:53:21.051Z" itemprop="datePublished">2019-07-07</time>
@@ -174,7 +174,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://weson.top/uncategorized/Oracle函数/" data-id="cjxsubrk10002z0fpbctmy5jx" class="article-share-link">Share</a>
+      <a data-url="http://weson.top/uncategorized/Oracle函数/" data-id="cjxuiovs300019gfpvswg7qy3" class="article-share-link">Share</a>
       
       
     </footer>
@@ -194,6 +194,227 @@
   
 </article>
 
+-->
+<!-- Modify by Yu-Hsuan Yen -->
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                <h1 id="Oracle-函数"><a href="#Oracle-函数" class="headerlink" title="Oracle 函数"></a>Oracle 函数</h1><h3 id="数值型函数"><a href="#数值型函数" class="headerlink" title="数值型函数"></a>数值型函数</h3><h4 id="1-ABS-x-函数：返回绝对值"><a href="#1-ABS-x-函数：返回绝对值" class="headerlink" title="1. ABS(x)函数：返回绝对值"></a>1. ABS(x)函数：返回绝对值</h4><ol>
+<li>参数：x：数值型表达式</li>
+<li>示例：  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">SELECT ABS(100),ABS(-3),ABS(0) FROM dual;</span><br><span class="line">```   </span><br><span class="line">返回 100 , 3 , 0  </span><br><span class="line"></span><br><span class="line">#### 2. SIGN(x)函数：返回x的正负值 </span><br><span class="line">1. 参数：x，数字型表达式</span><br><span class="line">2. 返回：数字，若为正值返回1，负值返回-1，0返回0  </span><br><span class="line">3. 示例：</span><br><span class="line">``` </span><br><span class="line">select sign(10),sign(-50),sign(0) from dual;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>返回 1 ， -1 ， 0</p>
+<h4 id="3-ceil-x-函数：返回大于等于x的最小整数值"><a href="#3-ceil-x-函数：返回大于等于x的最小整数值" class="headerlink" title="3. ceil(x)函数：返回大于等于x的最小整数值"></a>3. ceil(x)函数：返回大于等于x的最小整数值</h4><ol>
+<li>参数：x，数字型表达式</li>
+<li>返回：数字</li>
+<li><p>示例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select ceil(10.1),ceil(1.8+3.3),ceil(1.7+3.3),ceil(0) from dual;</span><br></pre></td></tr></table></figure>
+<p>返回 11 ， 6 ， 5 ， 0 </p>
+</li>
+</ol>
+<h4 id="4-floor-x-函数：返回小于等于x的最大整数值"><a href="#4-floor-x-函数：返回小于等于x的最大整数值" class="headerlink" title="4. floor(x))函数：返回小于等于x的最大整数值"></a>4. floor(x))函数：返回小于等于x的最大整数值</h4><ol>
+<li>参数：x，数字型表达式</li>
+<li>返回：数字</li>
+<li>示例：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select floor(10.1),floor(1.8+3.3),floor(1.7+3.3),floor(0) from dual;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>返回 10 ， 5 ， 5 ， 0 </p>
+<h4 id="5-power-x-y-返回x的y次幂"><a href="#5-power-x-y-返回x的y次幂" class="headerlink" title="5. power(x,y): 返回x的y次幂"></a>5. power(x,y): 返回x的y次幂</h4><ol>
+<li>参数：x，y 数字型表达式</li>
+<li>返回：数字</li>
+<li>示例：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select power(3,2),power(1.5,0),power(10,-1) from dual;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>返回： 9 , 1 ,  0.1  </p>
+<ul>
+<li>关系z=power(x,y),则y=1/log(z,x)   (条件z,x&gt;0)</li>
+</ul>
+<h4 id="6-exp-y-：返回e的y次幂（e为数学常量）"><a href="#6-exp-y-：返回e的y次幂（e为数学常量）" class="headerlink" title="6. exp(y)：返回e的y次幂（e为数学常量）"></a>6. exp(y)：返回e的y次幂（e为数学常量）</h4><ol>
+<li>参数：y，数字型表达式</li>
+<li>返回：数字</li>
+<li>示例<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select exp(1),exp(2),exp(0),exp(-3) from dual;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>返回： 2.71828182845905 , 7.38905609893065 , 1 ,  0.0497870683678639  </p>
+<ol start="4">
+<li>相反：ln(y) ：返回e为底的自然对数。</li>
+</ol>
+<h4 id="7-log-x-y-返回以x为底的y的对数"><a href="#7-log-x-y-返回以x为底的y的对数" class="headerlink" title="7. log(x,y): 返回以x为底的y的对数"></a>7. log(x,y): 返回以x为底的y的对数</h4><ol>
+<li>参数: x，y,数字型表达式，</li>
+<li>条件: x,y都必须大于0</li>
+<li>返回: 数字</li>
+<li>示例:<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select power(2,3),log(36,6),1/log(25,5) from dual;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>返回：8    , 0.5  , 2  </p>
+<ol start="5">
+<li>关系:z=power(x,y),则y=1/log(z,x)   (条件z,x&gt;0)  <h4 id="8-ln-y-返回以e为底的y的对数（e为数学常量）"><a href="#8-ln-y-返回以e为底的y的对数（e为数学常量）" class="headerlink" title="8. ln(y): 返回以e为底的y的对数（e为数学常量）"></a>8. ln(y): 返回以e为底的y的对数（e为数学常量）</h4></li>
+<li>参数: y，数字型表达式 (条件y&gt;0)</li>
+<li>返回: 数字</li>
+<li>示例  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">select exp(1),exp(3),exp(-3),ln(2.71828182845905),ln(20.0855369231877),ln(0.0497870683678639) from dual;</span><br><span class="line">```   </span><br><span class="line">返回： 2.71828182845905 ,	20.0855369231877 ,	0.0497870683678639 ,	1 ,	3 ,	-3</span><br><span class="line">4. 相近: log(x,y)</span><br><span class="line">返回以x为底的y的对数</span><br><span class="line">5. 相反: exp(y)</span><br><span class="line">返回e的y次幂</span><br><span class="line"></span><br><span class="line">#### 9. mod(x,y): 返回x除以y的余数</span><br><span class="line">1. 参数: x,y，数字型表达式</span><br><span class="line">2. 返回: 数字</span><br><span class="line">3. 示例</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>select mod(21,6),mod(12,4),mod(13,4) from dual;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">返回： 3 , 0 ,	1</span><br><span class="line"></span><br><span class="line">#### 10. round(x[,y]): 返回四舍五入后的值</span><br><span class="line">1. 参数: x,y，数字型表达式,如果y不为整数则截取y整数部分，如果y&gt;0则四舍五入为y位小数，如果y小于0则四舍五入到小数点向左第y位。</span><br><span class="line">2. 返回: 数字</span><br><span class="line">3.示例</span><br></pre></td></tr></table></figure></p>
+<p>select round(1234.56789,2),round(1234.56789,2.4),round(1234.56789,0),round(1234.56789),round(1234.56789,-2),round(1234.56789,-2.5) from dual;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">返回：  1234.57 ,	1234.57	 , 1235 ,	1235 ,	1200 ,	1200</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#### 11. trunc(x[,y]): 返回x按精度y截取后的值</span><br><span class="line">1. 参数: x,y，数字型表达式,如果y不为整数则截取y整数部分，如果y&gt;0则截取到y位小数，如果y小于0则截取到小数点向左第y位，小数前其它数据用0表示。</span><br><span class="line">2. 返回: 数字</span><br><span class="line">3. 示例</span><br></pre></td></tr></table></figure></p>
+<p>select trunc(5555.66666,2.1),trunc(5555.66666,-2.6),trunc(5555.033333)  from dual;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">返回： 1234.56 ,	1234.56 ,	1234 ,	1234 ,	1200 ,	1200</span><br><span class="line"></span><br><span class="line">#### 12. sqrt(x): 返回x的平方根</span><br><span class="line">1. 参数: x数字型表达式</span><br><span class="line">2. 返回: 数字</span><br><span class="line">3. 示例</span><br></pre></td></tr></table></figure></p>
+<p>select sqrt(81), sqrt(0), sqrt(1),sqrt(10) from dual;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">返回： 9 ,	0 ,	1 ,	 3.16227766016838  </span><br><span class="line"></span><br><span class="line">#### 13. 三角函数：</span><br><span class="line">* SIN(x): 返回一个数字的正弦值  </span><br><span class="line">示例</span><br></pre></td></tr></table></figure></p>
+<p>select sin(1.57079) from dual;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">返回：  1</span><br><span class="line"></span><br><span class="line">* SIGH(x): 返回双曲正弦的值  </span><br><span class="line">示例</span><br></pre></td></tr></table></figure></p>
+<p>select sin(20),sinh(20) from dual;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">返回： 0.91294525 , 242582598</span><br><span class="line"></span><br><span class="line">* COS(x): 返回一个给定数字的余弦  </span><br><span class="line">示例</span><br></pre></td></tr></table></figure></p>
+<p>select cos(-3.1415927) from dual;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">返回： -1</span><br><span class="line"></span><br><span class="line">* COSH(x): 返回一个数字反余弦值  </span><br><span class="line">示例</span><br><span class="line">```select cosh(20) from dual;</span><br></pre></td></tr></table></figure></p>
+<p>返回： 242582598</p>
+<ul>
+<li>TAN: 返回数字的正切值<br>示例<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select tan(20),tan(10) from dual;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>返回： 2.2371609 ,0.64836083</p>
+<ul>
+<li>TANH: 返回数字n的双曲正切值<br>示例<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select tanh(20),tan(20) from dual;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>返回： 1 ,2.2371609</p>
+<ul>
+<li>ASIN(x): 给出反正弦的值<br>示例<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select asin(0.5) from dual;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>返回： 0.52359878</p>
+<ul>
+<li>ACOS(x): 给出反余弦的值<br>示例<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select acos(-1) from dual;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>返回： 3.1415927</p>
+<ul>
+<li>ATAN(x): 返回一个数字的反正切值<br>示例<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select atan(1) from dual;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>返回： 0.78539816</p>
+<hr>
+<h3 id="字符型函数"><a href="#字符型函数" class="headerlink" title="字符型函数"></a>字符型函数</h3><h4 id="1-ASCII-x-函数："><a href="#1-ASCII-x-函数：" class="headerlink" title="1.ASCII(x)函数："></a>1.ASCII(x)函数：</h4>
+
+
+                <hr>
+                <!-- Pager -->
+                <ul class="pager">
+                    
+                    
+                    <li class="next">
+                        <a href="/uncategorized/Json/" data-toggle="tooltip" data-placement="top" title="Json">Next Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+
+                <br>
+
+                <!--打赏-->
+                
+                <!--打赏-->
+
+                <br>
+                <!--分享-->
+                
+                <div class="social-share" data-wechat-qrcode-helper align="center"></div>
+                <!--  css & js -->
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+                
+                <!--分享-->
+                <br>
+
+                <!-- require APlayer -->
+                
+
+                <!-- duoshuo Share start -->
+                
+                <!-- 多说 Share end-->
+
+                <!-- 多说评论框 start -->
+                
+                <!-- 多说评论框 end -->
+
+                <!-- disqus comment start -->
+                
+                <!-- disqus comment end -->
+
+                
+
+            </div>
+
+            <!-- Tabe of Content -->
+            
+
+            <!-- Sidebar Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+
+
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+        var d = document, t = 'script',
+            o = d.createElement(t),
+            s = d.getElementsByTagName(t)[0];
+        o.src = u;
+        if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+        s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function () {
+        anchors.options = {
+            visible: 'hover',
+            placement: 'left',
+            icon: 'ℬ'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link {
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top: -0.1em;
+        }
+    }
+</style>
 </section>
         
           <aside id="sidebar">
@@ -274,4 +495,453 @@
 
   </div>
 </body>
+</html>-->
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>零三岁少年</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Oracle 函数数值型函数1. ABS(x)函数：返回绝对值 参数：x：数值型表达式 示例：  12345678910SELECT ABS(100),ABS(-3),ABS(0) FROM dual;```   返回 100 , 3 , 0  #### 2. SIGN(x)函数：返回x的正负值 1. 参数：x，数字型表达式2. 返回：数字，若为正值返回1，负值返回-1，0返回0  3. 示例：`">
+<meta property="og:type" content="article">
+<meta property="og:title" content="零三岁少年">
+<meta property="og:url" content="http://weson.top/uncategorized/Oracle函数/index.html">
+<meta property="og:site_name" content="零三岁少年">
+<meta property="og:description" content="Oracle 函数数值型函数1. ABS(x)函数：返回绝对值 参数：x：数值型表达式 示例：  12345678910SELECT ABS(100),ABS(-3),ABS(0) FROM dual;```   返回 100 , 3 , 0  #### 2. SIGN(x)函数：返回x的正负值 1. 参数：x，数字型表达式2. 返回：数字，若为正值返回1，负值返回-1，0返回0  3. 示例：`">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-07-07T10:53:31.541Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="零三岁少年">
+<meta name="twitter:description" content="Oracle 函数数值型函数1. ABS(x)函数：返回绝对值 参数：x：数值型表达式 示例：  12345678910SELECT ABS(100),ABS(-3),ABS(0) FROM dual;```   返回 100 , 3 , 0  #### 2. SIGN(x)函数：返回x的正负值 1. 参数：x，数字型表达式2. 返回：数字，若为正值返回1，负值返回-1，0返回0  3. 示例：`">
+  
+    <link rel="alternate" href="/atom.xml" title="零三岁少年" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+
+<!-- hack iOS CSS :active style -->
+
+<body ontouchstart="">
+  <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">零三岁少年</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">个人博客</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://weson.top"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+  
+
+  <!-- Main Content -->
+  <!--<article id="post-Oracle函数" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/uncategorized/Oracle函数/" class="article-date">
+  <time datetime="2019-07-07T10:53:21.051Z" itemprop="datePublished">2019-07-07</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Oracle-函数"><a href="#Oracle-函数" class="headerlink" title="Oracle 函数"></a>Oracle 函数</h1><h3 id="数值型函数"><a href="#数值型函数" class="headerlink" title="数值型函数"></a>数值型函数</h3><h4 id="1-ABS-x-函数：返回绝对值"><a href="#1-ABS-x-函数：返回绝对值" class="headerlink" title="1. ABS(x)函数：返回绝对值"></a>1. ABS(x)函数：返回绝对值</h4><ol>
+<li>参数：x：数值型表达式</li>
+<li>示例：  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">SELECT ABS(100),ABS(-3),ABS(0) FROM dual;</span><br><span class="line">```   </span><br><span class="line">返回 100 , 3 , 0  </span><br><span class="line"></span><br><span class="line">#### 2. SIGN(x)函数：返回x的正负值 </span><br><span class="line">1. 参数：x，数字型表达式</span><br><span class="line">2. 返回：数字，若为正值返回1，负值返回-1，0返回0  </span><br><span class="line">3. 示例：</span><br><span class="line">``` </span><br><span class="line">select sign(10),sign(-50),sign(0) from dual;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>返回 1 ， -1 ， 0</p>
+<h4 id="3-ceil-x-函数：返回大于等于x的最小整数值"><a href="#3-ceil-x-函数：返回大于等于x的最小整数值" class="headerlink" title="3. ceil(x)函数：返回大于等于x的最小整数值"></a>3. ceil(x)函数：返回大于等于x的最小整数值</h4><ol>
+<li>参数：x，数字型表达式</li>
+<li>返回：数字</li>
+<li><p>示例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select ceil(10.1),ceil(1.8+3.3),ceil(1.7+3.3),ceil(0) from dual;</span><br></pre></td></tr></table></figure>
+<p>返回 11 ， 6 ， 5 ， 0 </p>
+</li>
+</ol>
+<h4 id="4-floor-x-函数：返回小于等于x的最大整数值"><a href="#4-floor-x-函数：返回小于等于x的最大整数值" class="headerlink" title="4. floor(x))函数：返回小于等于x的最大整数值"></a>4. floor(x))函数：返回小于等于x的最大整数值</h4><ol>
+<li>参数：x，数字型表达式</li>
+<li>返回：数字</li>
+<li>示例：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select floor(10.1),floor(1.8+3.3),floor(1.7+3.3),floor(0) from dual;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>返回 10 ， 5 ， 5 ， 0 </p>
+<h4 id="5-power-x-y-返回x的y次幂"><a href="#5-power-x-y-返回x的y次幂" class="headerlink" title="5. power(x,y): 返回x的y次幂"></a>5. power(x,y): 返回x的y次幂</h4><ol>
+<li>参数：x，y 数字型表达式</li>
+<li>返回：数字</li>
+<li>示例：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select power(3,2),power(1.5,0),power(10,-1) from dual;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>返回： 9 , 1 ,  0.1  </p>
+<ul>
+<li>关系z=power(x,y),则y=1/log(z,x)   (条件z,x&gt;0)</li>
+</ul>
+<h4 id="6-exp-y-：返回e的y次幂（e为数学常量）"><a href="#6-exp-y-：返回e的y次幂（e为数学常量）" class="headerlink" title="6. exp(y)：返回e的y次幂（e为数学常量）"></a>6. exp(y)：返回e的y次幂（e为数学常量）</h4><ol>
+<li>参数：y，数字型表达式</li>
+<li>返回：数字</li>
+<li>示例<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select exp(1),exp(2),exp(0),exp(-3) from dual;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>返回： 2.71828182845905 , 7.38905609893065 , 1 ,  0.0497870683678639  </p>
+<ol start="4">
+<li>相反：ln(y) ：返回e为底的自然对数。</li>
+</ol>
+<h4 id="7-log-x-y-返回以x为底的y的对数"><a href="#7-log-x-y-返回以x为底的y的对数" class="headerlink" title="7. log(x,y): 返回以x为底的y的对数"></a>7. log(x,y): 返回以x为底的y的对数</h4><ol>
+<li>参数: x，y,数字型表达式，</li>
+<li>条件: x,y都必须大于0</li>
+<li>返回: 数字</li>
+<li>示例:<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select power(2,3),log(36,6),1/log(25,5) from dual;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>返回：8    , 0.5  , 2  </p>
+<ol start="5">
+<li>关系:z=power(x,y),则y=1/log(z,x)   (条件z,x&gt;0)  <h4 id="8-ln-y-返回以e为底的y的对数（e为数学常量）"><a href="#8-ln-y-返回以e为底的y的对数（e为数学常量）" class="headerlink" title="8. ln(y): 返回以e为底的y的对数（e为数学常量）"></a>8. ln(y): 返回以e为底的y的对数（e为数学常量）</h4></li>
+<li>参数: y，数字型表达式 (条件y&gt;0)</li>
+<li>返回: 数字</li>
+<li>示例  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">select exp(1),exp(3),exp(-3),ln(2.71828182845905),ln(20.0855369231877),ln(0.0497870683678639) from dual;</span><br><span class="line">```   </span><br><span class="line">返回： 2.71828182845905 ,	20.0855369231877 ,	0.0497870683678639 ,	1 ,	3 ,	-3</span><br><span class="line">4. 相近: log(x,y)</span><br><span class="line">返回以x为底的y的对数</span><br><span class="line">5. 相反: exp(y)</span><br><span class="line">返回e的y次幂</span><br><span class="line"></span><br><span class="line">#### 9. mod(x,y): 返回x除以y的余数</span><br><span class="line">1. 参数: x,y，数字型表达式</span><br><span class="line">2. 返回: 数字</span><br><span class="line">3. 示例</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>select mod(21,6),mod(12,4),mod(13,4) from dual;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">返回： 3 , 0 ,	1</span><br><span class="line"></span><br><span class="line">#### 10. round(x[,y]): 返回四舍五入后的值</span><br><span class="line">1. 参数: x,y，数字型表达式,如果y不为整数则截取y整数部分，如果y&gt;0则四舍五入为y位小数，如果y小于0则四舍五入到小数点向左第y位。</span><br><span class="line">2. 返回: 数字</span><br><span class="line">3.示例</span><br></pre></td></tr></table></figure></p>
+<p>select round(1234.56789,2),round(1234.56789,2.4),round(1234.56789,0),round(1234.56789),round(1234.56789,-2),round(1234.56789,-2.5) from dual;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">返回：  1234.57 ,	1234.57	 , 1235 ,	1235 ,	1200 ,	1200</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#### 11. trunc(x[,y]): 返回x按精度y截取后的值</span><br><span class="line">1. 参数: x,y，数字型表达式,如果y不为整数则截取y整数部分，如果y&gt;0则截取到y位小数，如果y小于0则截取到小数点向左第y位，小数前其它数据用0表示。</span><br><span class="line">2. 返回: 数字</span><br><span class="line">3. 示例</span><br></pre></td></tr></table></figure></p>
+<p>select trunc(5555.66666,2.1),trunc(5555.66666,-2.6),trunc(5555.033333)  from dual;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">返回： 1234.56 ,	1234.56 ,	1234 ,	1234 ,	1200 ,	1200</span><br><span class="line"></span><br><span class="line">#### 12. sqrt(x): 返回x的平方根</span><br><span class="line">1. 参数: x数字型表达式</span><br><span class="line">2. 返回: 数字</span><br><span class="line">3. 示例</span><br></pre></td></tr></table></figure></p>
+<p>select sqrt(81), sqrt(0), sqrt(1),sqrt(10) from dual;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">返回： 9 ,	0 ,	1 ,	 3.16227766016838  </span><br><span class="line"></span><br><span class="line">#### 13. 三角函数：</span><br><span class="line">* SIN(x): 返回一个数字的正弦值  </span><br><span class="line">示例</span><br></pre></td></tr></table></figure></p>
+<p>select sin(1.57079) from dual;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">返回：  1</span><br><span class="line"></span><br><span class="line">* SIGH(x): 返回双曲正弦的值  </span><br><span class="line">示例</span><br></pre></td></tr></table></figure></p>
+<p>select sin(20),sinh(20) from dual;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">返回： 0.91294525 , 242582598</span><br><span class="line"></span><br><span class="line">* COS(x): 返回一个给定数字的余弦  </span><br><span class="line">示例</span><br></pre></td></tr></table></figure></p>
+<p>select cos(-3.1415927) from dual;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">返回： -1</span><br><span class="line"></span><br><span class="line">* COSH(x): 返回一个数字反余弦值  </span><br><span class="line">示例</span><br><span class="line">```select cosh(20) from dual;</span><br></pre></td></tr></table></figure></p>
+<p>返回： 242582598</p>
+<ul>
+<li>TAN: 返回数字的正切值<br>示例<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select tan(20),tan(10) from dual;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>返回： 2.2371609 ,0.64836083</p>
+<ul>
+<li>TANH: 返回数字n的双曲正切值<br>示例<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select tanh(20),tan(20) from dual;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>返回： 1 ,2.2371609</p>
+<ul>
+<li>ASIN(x): 给出反正弦的值<br>示例<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select asin(0.5) from dual;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>返回： 0.52359878</p>
+<ul>
+<li>ACOS(x): 给出反余弦的值<br>示例<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select acos(-1) from dual;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>返回： 3.1415927</p>
+<ul>
+<li>ATAN(x): 返回一个数字的反正切值<br>示例<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select atan(1) from dual;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>返回： 0.78539816</p>
+<hr>
+<h3 id="字符型函数"><a href="#字符型函数" class="headerlink" title="字符型函数"></a>字符型函数</h3><h4 id="1-ASCII-x-函数："><a href="#1-ASCII-x-函数：" class="headerlink" title="1.ASCII(x)函数："></a>1.ASCII(x)函数：</h4>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://weson.top/uncategorized/Oracle函数/" data-id="cjxuiovs300019gfpvswg7qy3" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/uncategorized/Json/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Json</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+-->
+<!-- Modify by Yu-Hsuan Yen -->
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                <h1 id="Oracle-函数"><a href="#Oracle-函数" class="headerlink" title="Oracle 函数"></a>Oracle 函数</h1><h3 id="数值型函数"><a href="#数值型函数" class="headerlink" title="数值型函数"></a>数值型函数</h3><h4 id="1-ABS-x-函数：返回绝对值"><a href="#1-ABS-x-函数：返回绝对值" class="headerlink" title="1. ABS(x)函数：返回绝对值"></a>1. ABS(x)函数：返回绝对值</h4><ol>
+<li>参数：x：数值型表达式</li>
+<li>示例：  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">SELECT ABS(100),ABS(-3),ABS(0) FROM dual;</span><br><span class="line">```   </span><br><span class="line">返回 100 , 3 , 0  </span><br><span class="line"></span><br><span class="line">#### 2. SIGN(x)函数：返回x的正负值 </span><br><span class="line">1. 参数：x，数字型表达式</span><br><span class="line">2. 返回：数字，若为正值返回1，负值返回-1，0返回0  </span><br><span class="line">3. 示例：</span><br><span class="line">``` </span><br><span class="line">select sign(10),sign(-50),sign(0) from dual;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>返回 1 ， -1 ， 0</p>
+<h4 id="3-ceil-x-函数：返回大于等于x的最小整数值"><a href="#3-ceil-x-函数：返回大于等于x的最小整数值" class="headerlink" title="3. ceil(x)函数：返回大于等于x的最小整数值"></a>3. ceil(x)函数：返回大于等于x的最小整数值</h4><ol>
+<li>参数：x，数字型表达式</li>
+<li>返回：数字</li>
+<li><p>示例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select ceil(10.1),ceil(1.8+3.3),ceil(1.7+3.3),ceil(0) from dual;</span><br></pre></td></tr></table></figure>
+<p>返回 11 ， 6 ， 5 ， 0 </p>
+</li>
+</ol>
+<h4 id="4-floor-x-函数：返回小于等于x的最大整数值"><a href="#4-floor-x-函数：返回小于等于x的最大整数值" class="headerlink" title="4. floor(x))函数：返回小于等于x的最大整数值"></a>4. floor(x))函数：返回小于等于x的最大整数值</h4><ol>
+<li>参数：x，数字型表达式</li>
+<li>返回：数字</li>
+<li>示例：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select floor(10.1),floor(1.8+3.3),floor(1.7+3.3),floor(0) from dual;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>返回 10 ， 5 ， 5 ， 0 </p>
+<h4 id="5-power-x-y-返回x的y次幂"><a href="#5-power-x-y-返回x的y次幂" class="headerlink" title="5. power(x,y): 返回x的y次幂"></a>5. power(x,y): 返回x的y次幂</h4><ol>
+<li>参数：x，y 数字型表达式</li>
+<li>返回：数字</li>
+<li>示例：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select power(3,2),power(1.5,0),power(10,-1) from dual;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>返回： 9 , 1 ,  0.1  </p>
+<ul>
+<li>关系z=power(x,y),则y=1/log(z,x)   (条件z,x&gt;0)</li>
+</ul>
+<h4 id="6-exp-y-：返回e的y次幂（e为数学常量）"><a href="#6-exp-y-：返回e的y次幂（e为数学常量）" class="headerlink" title="6. exp(y)：返回e的y次幂（e为数学常量）"></a>6. exp(y)：返回e的y次幂（e为数学常量）</h4><ol>
+<li>参数：y，数字型表达式</li>
+<li>返回：数字</li>
+<li>示例<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select exp(1),exp(2),exp(0),exp(-3) from dual;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>返回： 2.71828182845905 , 7.38905609893065 , 1 ,  0.0497870683678639  </p>
+<ol start="4">
+<li>相反：ln(y) ：返回e为底的自然对数。</li>
+</ol>
+<h4 id="7-log-x-y-返回以x为底的y的对数"><a href="#7-log-x-y-返回以x为底的y的对数" class="headerlink" title="7. log(x,y): 返回以x为底的y的对数"></a>7. log(x,y): 返回以x为底的y的对数</h4><ol>
+<li>参数: x，y,数字型表达式，</li>
+<li>条件: x,y都必须大于0</li>
+<li>返回: 数字</li>
+<li>示例:<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select power(2,3),log(36,6),1/log(25,5) from dual;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>返回：8    , 0.5  , 2  </p>
+<ol start="5">
+<li>关系:z=power(x,y),则y=1/log(z,x)   (条件z,x&gt;0)  <h4 id="8-ln-y-返回以e为底的y的对数（e为数学常量）"><a href="#8-ln-y-返回以e为底的y的对数（e为数学常量）" class="headerlink" title="8. ln(y): 返回以e为底的y的对数（e为数学常量）"></a>8. ln(y): 返回以e为底的y的对数（e为数学常量）</h4></li>
+<li>参数: y，数字型表达式 (条件y&gt;0)</li>
+<li>返回: 数字</li>
+<li>示例  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">select exp(1),exp(3),exp(-3),ln(2.71828182845905),ln(20.0855369231877),ln(0.0497870683678639) from dual;</span><br><span class="line">```   </span><br><span class="line">返回： 2.71828182845905 ,	20.0855369231877 ,	0.0497870683678639 ,	1 ,	3 ,	-3</span><br><span class="line">4. 相近: log(x,y)</span><br><span class="line">返回以x为底的y的对数</span><br><span class="line">5. 相反: exp(y)</span><br><span class="line">返回e的y次幂</span><br><span class="line"></span><br><span class="line">#### 9. mod(x,y): 返回x除以y的余数</span><br><span class="line">1. 参数: x,y，数字型表达式</span><br><span class="line">2. 返回: 数字</span><br><span class="line">3. 示例</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>select mod(21,6),mod(12,4),mod(13,4) from dual;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">返回： 3 , 0 ,	1</span><br><span class="line"></span><br><span class="line">#### 10. round(x[,y]): 返回四舍五入后的值</span><br><span class="line">1. 参数: x,y，数字型表达式,如果y不为整数则截取y整数部分，如果y&gt;0则四舍五入为y位小数，如果y小于0则四舍五入到小数点向左第y位。</span><br><span class="line">2. 返回: 数字</span><br><span class="line">3.示例</span><br></pre></td></tr></table></figure></p>
+<p>select round(1234.56789,2),round(1234.56789,2.4),round(1234.56789,0),round(1234.56789),round(1234.56789,-2),round(1234.56789,-2.5) from dual;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">返回：  1234.57 ,	1234.57	 , 1235 ,	1235 ,	1200 ,	1200</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#### 11. trunc(x[,y]): 返回x按精度y截取后的值</span><br><span class="line">1. 参数: x,y，数字型表达式,如果y不为整数则截取y整数部分，如果y&gt;0则截取到y位小数，如果y小于0则截取到小数点向左第y位，小数前其它数据用0表示。</span><br><span class="line">2. 返回: 数字</span><br><span class="line">3. 示例</span><br></pre></td></tr></table></figure></p>
+<p>select trunc(5555.66666,2.1),trunc(5555.66666,-2.6),trunc(5555.033333)  from dual;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">返回： 1234.56 ,	1234.56 ,	1234 ,	1234 ,	1200 ,	1200</span><br><span class="line"></span><br><span class="line">#### 12. sqrt(x): 返回x的平方根</span><br><span class="line">1. 参数: x数字型表达式</span><br><span class="line">2. 返回: 数字</span><br><span class="line">3. 示例</span><br></pre></td></tr></table></figure></p>
+<p>select sqrt(81), sqrt(0), sqrt(1),sqrt(10) from dual;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">返回： 9 ,	0 ,	1 ,	 3.16227766016838  </span><br><span class="line"></span><br><span class="line">#### 13. 三角函数：</span><br><span class="line">* SIN(x): 返回一个数字的正弦值  </span><br><span class="line">示例</span><br></pre></td></tr></table></figure></p>
+<p>select sin(1.57079) from dual;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">返回：  1</span><br><span class="line"></span><br><span class="line">* SIGH(x): 返回双曲正弦的值  </span><br><span class="line">示例</span><br></pre></td></tr></table></figure></p>
+<p>select sin(20),sinh(20) from dual;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">返回： 0.91294525 , 242582598</span><br><span class="line"></span><br><span class="line">* COS(x): 返回一个给定数字的余弦  </span><br><span class="line">示例</span><br></pre></td></tr></table></figure></p>
+<p>select cos(-3.1415927) from dual;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">返回： -1</span><br><span class="line"></span><br><span class="line">* COSH(x): 返回一个数字反余弦值  </span><br><span class="line">示例</span><br><span class="line">```select cosh(20) from dual;</span><br></pre></td></tr></table></figure></p>
+<p>返回： 242582598</p>
+<ul>
+<li>TAN: 返回数字的正切值<br>示例<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select tan(20),tan(10) from dual;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>返回： 2.2371609 ,0.64836083</p>
+<ul>
+<li>TANH: 返回数字n的双曲正切值<br>示例<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select tanh(20),tan(20) from dual;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>返回： 1 ,2.2371609</p>
+<ul>
+<li>ASIN(x): 给出反正弦的值<br>示例<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select asin(0.5) from dual;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>返回： 0.52359878</p>
+<ul>
+<li>ACOS(x): 给出反余弦的值<br>示例<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select acos(-1) from dual;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>返回： 3.1415927</p>
+<ul>
+<li>ATAN(x): 返回一个数字的反正切值<br>示例<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select atan(1) from dual;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>返回： 0.78539816</p>
+<hr>
+<h3 id="字符型函数"><a href="#字符型函数" class="headerlink" title="字符型函数"></a>字符型函数</h3><h4 id="1-ASCII-x-函数："><a href="#1-ASCII-x-函数：" class="headerlink" title="1.ASCII(x)函数："></a>1.ASCII(x)函数：</h4>
+
+
+                <hr>
+                <!-- Pager -->
+                <ul class="pager">
+                    
+                    
+                    <li class="next">
+                        <a href="/uncategorized/Json/" data-toggle="tooltip" data-placement="top" title="Json">Next Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+
+                <br>
+
+                <!--打赏-->
+                
+                <!--打赏-->
+
+                <br>
+                <!--分享-->
+                
+                <div class="social-share" data-wechat-qrcode-helper align="center"></div>
+                <!--  css & js -->
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+                
+                <!--分享-->
+                <br>
+
+                <!-- require APlayer -->
+                
+
+                <!-- duoshuo Share start -->
+                
+                <!-- 多说 Share end-->
+
+                <!-- 多说评论框 start -->
+                
+                <!-- 多说评论框 end -->
+
+                <!-- disqus comment start -->
+                
+                <!-- disqus comment end -->
+
+                
+
+            </div>
+
+            <!-- Tabe of Content -->
+            
+
+            <!-- Sidebar Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+
+
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+        var d = document, t = 'script',
+            o = d.createElement(t),
+            s = d.getElementsByTagName(t)[0];
+        o.src = u;
+        if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+        s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function () {
+        anchors.options = {
+            visible: 'hover',
+            placement: 'left',
+            icon: 'ℬ'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link {
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top: -0.1em;
+        }
+    }
+</style>
+
+
+  <!-- Footer -->
+  <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 零三岁少年<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+  <script type="text/javascript" src="/js/toc.js?v=1.0.0" async=""></script>
+  <!-- Image to hack wechat -->
+  <img src="http://weson.top/img/icon_wechat.png" width="0" height="0" />
+  <!-- Migrate from head to bottom, no longer block render and still work -->
+
+</body>
+
 </html>
